@@ -3,6 +3,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import DataStructure.Interval;
 import DataStructure.ListNode;
 import DataStructure.TreeLinkNode;
 import DataStructure.TreeNode;
@@ -78,11 +79,9 @@ public class Run {
 		//g.jump(A);
 		
 		
-		Dynamic d = new Dynamic();
-		List<List<Integer>> tri = new ArrayList<List<Integer>>();
-		tri.add(new ArrayList<Integer>(1));
-		tri.add(new ArrayList<Integer>(2));
-		System.out.println();
+		Simulation d = new Simulation();
+		//System.out.println(d.multiply("9", "9"));
+		System.out.println(d.divide(-2147483648,-1));
 	}
 
 }
