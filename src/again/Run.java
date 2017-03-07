@@ -2,8 +2,8 @@ package again;
 
 public class Run {
 	public static void main(String[] args) {
-		Solution_String s = new Solution_String();
-		String[] strs = {""};
-		System.out.println( s.simplifyPath("/"));
+		Solution_Array s = new Solution_Array();
+		int[] arr = {1,1,2,2,3,4};
+		System.out.println( s.removeDuplicates(arr));
 	}
 }
