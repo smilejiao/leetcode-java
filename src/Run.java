@@ -68,8 +68,7 @@ public class Run {
 		//i = sb.ladderLength(s1, s2, wordList);
 		//System.out.println(ret);
 		
-		DFS dfs = new DFS();
-		int[]  sip = {1, 2};
+
 //		List<List<Integer>> string = dfs.combinationSum2(sip, 4);
 //		System.out.println(string);
 		
@@ -80,7 +79,6 @@ public class Run {
 		
 		
 		Simulation d = new Simulation();
-		//System.out.println(d.multiply("9", "9"));
 		System.out.println(d.divide(-2147483648,-1));
 	}
 

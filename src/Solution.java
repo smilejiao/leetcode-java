@@ -360,7 +360,7 @@ public class Solution {
 	 * @return
 	 */
 	public int firstUniqChar(String s) {
-		HashMap<Character, Integer> scoreboard = new HashMap<>();
+		HashMap<Character, Integer> scoreboard = new HashMap<Character, Integer>();
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
 			if (scoreboard.containsKey(c)) {
@@ -406,7 +406,7 @@ public class Solution {
 	 * @return
 	 */
 	public boolean containsDuplicate(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i++) {
         	int a = nums[i];
         	if (map.containsKey(a)) {
