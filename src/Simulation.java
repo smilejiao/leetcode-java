@@ -572,11 +572,49 @@ public class Simulation {
         else 
         	return -res;
     }
-    // Time Limit Exceeded
+    // Time Limit Exceeded，每次循环减法耗时太大
     
     public int divide(int dividend, int divisor) {
-    	
+    	if (divisor == 0 || dividend == 0)
+    		return 0;
+    	if (dividend == -2147483648 && divisor == -1)
+    		return 2147483647;
+    	boolean isNeg = (dividend>0 && divisor<0) || (dividend<0 && divisor>0);
+    	long a = Math.abs((long)dividend);
+    	long b = Math.abs((long)divisor);
+    	if (b>a)
+    		return 0;
+    	long sum = 0;
+    	long pow = 0;
+    	int result = 0;
+    	while (a>=b) {
+    		pow = 1;
+    		sum = b;
+    		while (sum + sum <= a) {
+    			sum += sum;
+    			pow += pow;
+    		}
+    		 a -= sum;
+    		 result +=  pow;
+    	}
+    	return isNeg? -result :result;
     }
+    //beats 94.29%， 大数的话，不行就单独处理if吧
+    
+    /**68. Text Justification
+     */
+    public List<String> fullJustify(String[] words, int maxWidth) {
+    	List<String> res = new ArrayList<String>();
+        if (maxWidth == 0 || words.length == 0)
+        	return res;
+        int curLength = 0;
+        String str = "";
+        for (int i=0; i<words.length; i++) {
+        	if (curLength )
+        }
+
+    } 
+    
     
     
     
